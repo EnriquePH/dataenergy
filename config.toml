@@ -11,7 +11,6 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   bio = ""
   avatar = "img/avatar.png"
 
-
 [Params]
   description = "Data Science Blog" # Site Description. Used in meta description
   copyright = "Data Energy" # Copyright holder, otherwise will use .Site.Title
@@ -33,6 +32,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path. Optional
   mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config. Optional
   hideNoPostsWarning = false # Don't show no posts empty state warning in main page, if true
+  publishDir = "docs"
 
 [Params.Entry]
   meta = ["date", "categories"] # Enable meta fields in given order
@@ -94,3 +94,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [outputs]
   home = ["HTML", "RSS", "MANIFEST"]
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
