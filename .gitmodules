@@ -1,3 +1,6 @@
 [submodule "themes/twenty-twenty-hugo"]
 	path = themes/twenty-twenty-hugo
 	url = https://github.com/themefisher/twenty-twenty-hugo
+[submodule "themes/dataenergy-tanka"]
+	path = themes/dataenergy-tanka
+	url = https://github.com/EnriquePH/hugo-tanka

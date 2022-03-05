@@ -57,6 +57,9 @@ packageVersion("blogdown")
 blogdown::new_site(theme = "EnriquePH/hugo-tanka")
 blogdown::stop_server()
 
+`git submodule add https://github.com/EnriquePH/hugo-tanka ./themes/dataenergy-tanka`
+
+blogdown::check_site()
 
 # Style
 Technical Writing style
