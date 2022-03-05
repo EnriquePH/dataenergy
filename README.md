@@ -54,12 +54,14 @@ Graphic Design
 ### Blogdown
 
 packageVersion("blogdown")
-blogdown::new_site(theme = "EnriquePH/hugo-tanka")
-blogdown::stop_server()
+blogdown::new_site(theme = "EnriquePH/Binario")
 
 `git submodule add https://github.com/EnriquePH/hugo-tanka ./themes/dataenergy-tanka`
-
+blogdown::stop_server()
 blogdown::check_site()
+blogdown::serve_site()
+blogdown::install_theme("EnriquePH/dataenergy-tanka")
+
 
 # Style
 Technical Writing style
