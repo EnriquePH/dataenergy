@@ -1,5 +1,5 @@
 # Data Energy
-** Data Science Blog **
+**Data Science Blog**
 
 
 ## Branding

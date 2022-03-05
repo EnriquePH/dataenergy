@@ -1,0 +1,96 @@
+baseurl = "www.dataenergy.biz"
+title = "Data Energy"
+languageCode = "en-us"
+paginate = "10" # Number of elements per page in pagination
+theme = "dataenergy-binario"
+disqusShortname = "" # Enable comments by entering your Disqus shortname
+googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+
+[Author] # Used in authorbox
+  name = "Enrique Pérez Herrero"
+  bio = ""
+  avatar = "img/avatar.png"
+
+
+[Params]
+  description = "Data Science Blog" # Site Description. Used in meta description
+  copyright = "Data Energy" # Copyright holder, otherwise will use .Site.Title
+  opengraph = true # Enable OpenGraph if true
+  schema = true # Enable Schema
+  twitter_cards = false # Enable Twitter Cards if true
+  columns = 2 # Set the number of cards columns. Possible values: 1, 2, 3
+  mainSections = ["post"] # Set main page sections
+  dateFormat = "January 02, 2006" # Change the format of dates
+  colorTheme = "dark-blue" # dark-green, dark-blue, dark-red, dark-violet
+  customCSS = ["css/custom.css"] # Include custom CSS files
+  customJS = ["js/custom.js"] # Include custom JS files
+  mainMenuAlignment = "right" # Align main menu (desktop version) to the right side
+  authorbox = true # Show authorbox at bottom of single pages if true
+  comments = false # Enable comments for all site pages
+  related = true # Enable Related content for single pages
+  relatedMax = 5 # Set the maximum number of elements that can be displayed in related block. Optional
+  mathjax = true # Enable MathJax for all site pages
+  mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path. Optional
+  mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config. Optional
+  hideNoPostsWarning = false # Don't show no posts empty state warning in main page, if true
+
+[Params.Entry]
+  meta = ["date", "categories"] # Enable meta fields in given order
+  toc = true # Enable Table of Contents
+  tocOpen = true # Open Table of Contents block. Optional
+
+[Params.Featured]
+  previewOnly = true # Show only preview featured image
+
+[Params.Breadcrumb]
+  enable = true # Enable breadcrumb block globally
+  homeText = "Home" # Home node text
+
+[Params.Social]
+  email = "eph.project1500@gmail.com"
+  #facebook = "username"
+  twitter = "username"
+  telegram = "username"
+  #instagram = "username"
+  #pinterest = "username"
+  #vk = "username"
+  linkedin = "username"
+  github = "EnriquePH"
+  #gitlab = "username"
+  stackoverflow = "4678112"
+  #mastodon = "https://some.instance/@username"
+  medium = "username"
+
+[Params.Share] # Entry Share block
+  facebook = false
+  twitter = true
+  reddit = true
+  telegram = true
+  linkedin = true
+  vk = true
+  pocket = false
+  pinterest = false
+
+# Web App Manifest settings
+# https://www.w3.org/TR/appmanifest/
+# https://developers.google.com/web/fundamentals/web-app-manifest/
+[Params.Manifest]
+  name = "Data Energy"
+  shortName = "Data Energy"
+  display = "browser"
+  startUrl = "/"
+  backgroundColor = "#2a2a2a"
+  themeColor = "#0b1b1b"
+  description = "Data Science Blog"
+  orientation = "portrait"
+  scope = "/"
+
+[outputFormats]
+  [outputFormats.MANIFEST]
+    mediaType = "application/json"
+    baseName = "manifest"
+    isPlainText = true
+    notAlternative = true
+
+[outputs]
+  home = ["HTML", "RSS", "MANIFEST"]
