@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Data Energy</title>
-    <link>www.dataenergy.biz/projects/</link>
+    <link>/projects/</link>
     <description>Recent content in Projects on Data Energy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="www.dataenergy.biz/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Projects</title>
-      <link>www.dataenergy.biz/projects/projects/</link>
+      <link>/projects/projects/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>www.dataenergy.biz/projects/projects/</guid>
+      <guid>/projects/projects/</guid>
       <description>$$ \frac{x^2}{2} $$</description>
     </item>
     
