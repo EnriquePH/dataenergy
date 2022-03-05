@@ -10,7 +10,7 @@
  * Design a Logo
 
 
-## Static site generator
+## Select Static site generator and framework
 
  * [Hugo](https://gohugo.io/)
  * Blogdown
@@ -27,12 +27,36 @@ Photo
 Graphic Design
 
 ## Git version control
-Create repo,
- * git init
-keys
-.gitignore
-LICENSE
-README
+
+### New repo
+
+ * github.com: create new repo
+ * Add .gitignore: `git touch .gitignore`
+ * Initialize repository:  `git init`
+ * git commit -m "first commit"
+ * git branch -M main
+ * git remote set-url origin git@github.com:EnriquePH/dataenergy.git
+ * git push --set-upstream origin main
+ 
+### SSH key access to github
+
+ * Create keys: `ssh-keygen` to  file github_rsa
+ * cat ~/.ssh/github_rsa.pub and copy key to github.com
+ * Add SSH private key to the ssh-agent: `ssh-add ~/.ssh/github_rsa`
+ * Test connection: `ssh -T git@github.com`
+
+
+### Important files
+
+* Choose a LICENCE
+* Add README.md
+
+### Blogdown
+
+packageVersion("blogdown")
+blogdown::new_site(theme = "EnriquePH/hugo-tanka")
+blogdown::stop_server()
+
 
 # Style
 Technical Writing style
@@ -76,3 +100,7 @@ Google Analytics
 https://themes.gohugo.io/themes/minimal/
 
 git submodule add https://github.com/themefisher/twenty-twenty-hugo themes/twenty-twenty-hugo
+
+
+git remote set-url origin git@github.com:EnriquePH/dataenergy.git
+
