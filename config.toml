@@ -5,6 +5,7 @@ paginate = "10" # Number of elements per page in pagination
 theme = "dataenergy-binario"
 disqusShortname = "" # Enable comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 
 [Author] # Used in authorbox
   name = "Enrique Pérez Herrero"
@@ -36,8 +37,8 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Params.Entry]
   meta = ["date", "categories"] # Enable meta fields in given order
-  toc = true # Enable Table of Contents
-  tocOpen = true # Open Table of Contents block. Optional
+  toc = false # Enable Table of Contents
+  tocOpen = false # Open Table of Contents block. Optional
 
 [Params.Featured]
   previewOnly = true # Show only preview featured image
