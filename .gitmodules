@@ -4,6 +4,3 @@
 [submodule "themes/dataenergy-tanka"]
 	path = themes/dataenergy-tanka
 	url = https://github.com/EnriquePH/hugo-tanka
-[submodule "themes/dataenergy-binario"]
-	path = themes/dataenergy-binario
-	url = https://github.com/EnriquePH/Binario
