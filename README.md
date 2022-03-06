@@ -62,6 +62,7 @@ blogdown::check_site()
 blogdown::serve_site()
 blogdown::install_theme("EnriquePH/dataenergy-tanka")
 
+git submodule add https://github.com/EnriquePH/Binario ./themes/dataenergy-binario
 
 # Style
 Technical Writing style
