@@ -1,0 +1,59 @@
+---
+title: "Max Matrix Plot 3D image"
+author: "Enrique Pérez Herrero"
+date: "2022-03-06"
+output: html_document
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<pre class="r"><code>## Load packages
+library(plot3D)</code></pre>
+<div id="square-max-matrix" class="section level1">
+<h1>Square Max Matrix</h1>
+<pre class="r"><code>max_matrix = function(n) {
+  n &lt;- 10
+  max_m &lt;- c()
+  for(i in c(1:n)) {
+    for (j in c(1:n)) {
+      max_m &lt;- append(max_m, max(i, j))
+    }
+  }
+  dim(max_m) &lt;- c(n, n)
+  max_m
+}
+
+max_matrix(10)</code></pre>
+<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+##  [1,]    1    2    3    4    5    6    7    8    9    10
+##  [2,]    2    2    3    4    5    6    7    8    9    10
+##  [3,]    3    3    3    4    5    6    7    8    9    10
+##  [4,]    4    4    4    4    5    6    7    8    9    10
+##  [5,]    5    5    5    5    5    6    7    8    9    10
+##  [6,]    6    6    6    6    6    6    7    8    9    10
+##  [7,]    7    7    7    7    7    7    7    8    9    10
+##  [8,]    8    8    8    8    8    8    8    8    9    10
+##  [9,]    9    9    9    9    9    9    9    9    9    10
+## [10,]   10   10   10   10   10   10   10   10   10    10</code></pre>
+</div>
+<div id="d-plot-of-max-matrix" class="section level1">
+<h1>3D plot of max matrix</h1>
+<pre class="r"><code>hist3D(x = 1:n,
+      y = 1:n,
+      z = max_matrix(n),
+      phi = 45,
+      theta = -45,
+      border = &quot;black&quot;,
+      d = 1,
+      # distance of the eyepoint from the centre of the plotting box
+      r = 1, 
+      bg = &quot;b&quot;,
+      box = FALSE,
+      # change background color
+      par(bg = &quot;black&quot;), 
+      colkey = FALSE,
+      image = TRUE,
+      contour = FALSE
+      )</code></pre>
+</div>
