@@ -1,5 +1,5 @@
 baseurl = "/"
-title = "Data Energy"
+title = "DATA ENERGY"
 languageCode = "en-us"
 paginate = "10" # Number of elements per page in pagination
 theme = "dataenergy-binario"
