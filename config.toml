@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "www.dataenergy.biz"
 title = "DATA ENERGY"
 languageCode = "en-us"
 paginate = "10" # Number of elements per page in pagination
