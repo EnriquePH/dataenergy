@@ -100,9 +100,13 @@ R-bloggers
 Python-bloggers
 
 # Monetization
-BAT / Brave Browser
-* Sign up Brave Creators    
-* create file: `./content/.well-known/brave-rewards-verification.txt`    
+
+## BAT / Brave Browser
+  * Sign up Brave Creators    
+  * create file: `./content/.well-known/brave-rewards-verification.txt` 
+
+Too many redirections, use DNS change
+
 
 # Search Engine Optimization
 Google Analytics
