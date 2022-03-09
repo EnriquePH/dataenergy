@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: dataenergy.biz
+Token: 4701e2254f28d7bc72e0c08d36991f9487d3d75052b0c8e596045bcb2bbd92a0
