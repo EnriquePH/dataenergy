@@ -101,6 +101,9 @@ Python-bloggers
 
 # Monetization
 BAT / Brave Browser
+Sign up
+create folder ./public/.well-known
+create file brave-rewards-verification.txt
 
 # Search Engine Optimization
 Google Analytics
