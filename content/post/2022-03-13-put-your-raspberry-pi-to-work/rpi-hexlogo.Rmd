@@ -1,0 +1,27 @@
+---
+title: "RPi Hex log"
+author: "Enrique Pérez Herrero"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r}
+library(hexSticker)
+```
+
+```{r}
+file_path <- "./content/post/2022-03-13-put-your-raspberry-pi-to-work/rpi-logo.png"
+
+imgurl <- system.file(file_path,
+                      package = "hexSticker")
+sticker(
+  imgurl,
+  package = "hexSticker",
+  p_size = 20,
+  s_x = 1,
+  s_y = .75,
+  s_width = .6,
+  filename = "./test.png"
+)
+```
+

@@ -7,10 +7,12 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
 googleAnalytics = "G-8HK4L7M5ZV" # Enable Google Analytics by entering your tracking id
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 
+
 [Author] # Used in authorbox
   name = "Enrique Pérez Herrero"
   bio = ""
   avatar = "img/avatar.png"
+
 
 [Params]
   description = "Data Science Blog" # Site Description. Used in meta description

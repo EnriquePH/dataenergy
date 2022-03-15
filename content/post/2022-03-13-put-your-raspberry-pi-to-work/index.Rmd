@@ -1,0 +1,132 @@
+---
+title: Put your Raspberry Pi to work!
+author: Enrique Pérez Herrero
+date: '2022-03-13'
+slug: []
+categories:
+  - RPi, earnings
+tags:
+  - bash, cryptocurrency
+draft: true
+---
+
+Earn cryptocurrency sharing your band width with your [Raspberry Pi](https://www.raspberrypi.org/).
+
+
+# Setting up the hardware:
+
+* Raspberry Pi 3 Model B V1.2
+* USB power cable
+* Ethernet cable
+* Micro SD Card 128 Gb and SD Adapter
+* RPi Acrylic Case with Fan, and heat sinks
+* There are two aluminium sinks and a copper plate.
+
+Before plug in the fan wires into the RPi GPIO take a look at:
+https://pi4j.com/1.2/pins/model-3b-rev1.html, and check your fan voltage it can be 3V or 5V.
+
+You must take note which pins do you connect your fan, I'm going to use:
+ * PIN 6 GND, fan black wire
+ * PIN 8 +5V, fan red wire. According to the numbering scheme this pin 8 corresponds to GPIO 14 TXD, later on we need to remember this number when we configure the fan connection in the RPi Configuration App.
+
+
+# RPi install OS
+* Download and Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/).    
+* Select Raspberry Pi OS(32-bit) in Imager.
+* Insert the Micro SD into the Adapter, check that the adapter is unlocked.
+* Insert the Adapter with the card into your laptop and choose the card as storage in the Imager.
+* Click "WRITE" on Imager and wait till the process is completed.
+* Extract the Adapter from the laptop and extract the Micro SD.
+
+# Setting up the RPi
+
+* Start up RPi
+* Connect Monitor, keyboard and mouse to your RPi.
+* Connect the USB to power and start up the RPi.
+* When the OS starts a welcome screen lets you to configure your settings.
+* In the RPi menu open: Preferences > Raspberry Pi Configuration and
+change your localhost, enable SSH and fan, selecting pin GPIO 14 and 65ºC as the temperature to turn on the fan.
+* Find the IP that the RPi has. `ping raspberrypi.local`
+* ssh to your RPi from your laptop.
+
+# Setting up a Mysterium Node
+
+* Register in Mysterium node web: https://mystnodes.com/registration: Name, email and password.
+
+* Get your API key: Your API key allows you to manually claim your nodes via the Node UI (go to Settings page there) and CLI.
+
+Connect to your Raspberry Pi and install a Mysterium node:
+https://mystnodes.com/onboarding/rpi/existing/0
+
+SSH into your Raspberry Pi:
+ssh [your-raspberry-username]@[ip-of-your-raspberry]
+
+Add repo with `myst` package: https://github.com/mysteriumnetwork/node
+
+```{bash}
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 648ACFD622F3D138
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E98404D386FA1D9
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ECCB6A56B22C536D
+sudo add-apt-repository ppa:mysteriumnetwork/node
+sudo apt-get update
+sudo apt install myst
+```
+From RPi:
+Configuring myst, accept terms and conditions
+
+# Setting Mysterium NodeIU
+
+* Access from your laptop to NodeUI:
+http://[ip-of-your-raspberry]:4449/#/onboarding
+Try opening the Node UI in your browser and do manual claiming there: [local-ip-of-your-node]:4449 (you can find IP of your node by looking into your router settings)
+
+* Default Withdrawal settings
+Fill in the following information to add a default withdrawal address for payments. add metamask address in polygon network
+
+* Network registration
+To register your node you can either use free registration subsidised by Mysterium Network or deposit a small amount of MYST token to cover registration fee. 
+
+Deposit MYST token
+
+Buy MYST with Credit or Debit card
+1. Send not less than 0.2 MYST to your identity balance on Polygon Mainnet
+https://crypto.com/price/mysterium
+
+nano /etc/mysterium-node/config.toml
+
+* Fill in the following information to finish setting up your node.
+
+Please create default WebUI password. At least 10 characters are required.
+
+Node UI password
+
+Claim node:
+https://mystnodes.com/onboarding/rpi/existing/0
+
+
+Install a Mysterium node:
+
+```{bash}
+sudo apt-get update
+sudo apt-get install myst
+```
+
+Once installation finishes, click CLAIM button to continue.
+
+https://docs.mysterium.network/node-runners/mysterium-cli/
+
+
+# Bitping Node
+
+https://blog.bitping.com/running-a-bitping-node/#raspberry-pi-armv7
+
+```{bash}
+wget https://downloads.bitping.com/node/armv7.zip
+unzip armv7.zip
+rm armv7.zip
+./release/bitping-node-armv7-linux --server
+```
+
+
+
+

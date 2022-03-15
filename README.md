@@ -66,11 +66,16 @@ blogdown::install_theme("EnriquePH/dataenergy-tanka")
 
 git submodule add https://github.com/EnriquePH/Binario ./themes/dataenergy-binario
 
+## Highlight code
+
+* https://amber.rbind.io/2017/11/15/syntaxhighlighting/
+* download highlight:  https://highlightjs.org/download/
+
+
 # Style
 Technical Writing style
 Correct grammar and sintaxis
 Lint code
-
 
 
 # Hosting
@@ -107,6 +112,12 @@ Python-bloggers
 
 Too many redirections, use DNS change
 
+Netlify / Domains / DNS Settings
+
+Name: dataenergy.biz
+TTL:  3600 seconds
+Type: TXT
+Value: brave-ledger-verification=your_token
 
 # Search Engine Optimization
 Google Analytics
