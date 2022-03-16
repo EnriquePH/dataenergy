@@ -115,6 +115,7 @@ Once installation finishes, click CLAIM button to continue.
 
 https://docs.mysterium.network/node-runners/mysterium-cli/
 
+These are confirmed earnings which are not settled to your Balance yet. Settlement to Balance is done either automatically when 5 MYST is reached or manually when SETTLE button is clicked. Please note that settlement fee is 20% plus blockchain fees (0.0175842 MYST), so Balance will be lower than Total earnings.
 
 # Bitping Node
 

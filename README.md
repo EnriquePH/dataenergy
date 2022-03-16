@@ -68,9 +68,9 @@ git submodule add https://github.com/EnriquePH/Binario ./themes/dataenergy-binar
 
 ## Highlight code
 
-* https://amber.rbind.io/2017/11/15/syntaxhighlighting/
 * download highlight:  https://highlightjs.org/download/
-
+* https://highlightjs.org/static/demo/
+* https://www.r-bloggers.com/2019/07/adding-syntax-highlight/
 
 # Style
 Technical Writing style
@@ -114,10 +114,10 @@ Too many redirections, use DNS change
 
 Netlify / Domains / DNS Settings
 
-Name: dataenergy.biz
-TTL:  3600 seconds
-Type: TXT
-Value: brave-ledger-verification=your_token
+Name: dataenergy.biz    
+TTL:  3600 seconds    
+Type: TXT    
+Value: brave-ledger-verification=your_token    
 
 # Search Engine Optimization
 Google Analytics
