@@ -19,11 +19,11 @@ featured:
   previewOnly: false
 ---
 
-R Function for plotting a Confusion Matrix with `ggplot2`
+Plotting the Confusion Matrix with `ggplot` and R
 
 <!--more-->
 
-Package caret includes the `confusionMatrix` function that returns a very complete output.
+The R package `caret` includes the `confusionMatrix` function that returns a very complete output.
 
 ```{r echo=TRUE, message=FALSE}
 library(e1071)
@@ -32,6 +32,8 @@ library(ggplot2)
 library(scales)
 library(caret)
 ```
+
+We run the Naïve Bayes classification in the classical iris data set.
 
 ```{r}
 iris$spl = caTools::sample.split(iris, SplitRatio = 0.8)
@@ -47,7 +49,7 @@ cfm <- confusionMatrix(nb_train_predict, test$Species)
 cfm
 ```
 
-To display confusion matrix as ggplot graphic:
+To plot the obtained confusion matrix as a `ggplot` graphic, we use the following function:
 
 ```{r}
 ggplotConfusionMatrix <- function(m){
