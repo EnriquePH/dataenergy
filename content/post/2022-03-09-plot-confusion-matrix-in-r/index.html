@@ -19,17 +19,17 @@ featured:
   previewOnly: false
 ---
 
-<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>R Function for plotting a Confusion Matrix with <code>ggplot2</code></p>
+<p>Plotting the Confusion Matrix with <code>ggplot</code> and R</p>
 <!--more-->
-<p>Package caret includes the <code>confusionMatrix</code> function that returns a very complete output.</p>
+<p>The R package <code>caret</code> includes the <code>confusionMatrix</code> function that returns a very complete output.</p>
 <pre class="r"><code>library(e1071)
 library(caTools)
 library(ggplot2)
 library(scales)
 library(caret)</code></pre>
+<p>We run the Naïve Bayes classification in the classical iris data set.</p>
 <pre class="r"><code>iris$spl = caTools::sample.split(iris, SplitRatio = 0.8)
 train &lt;- subset(iris, iris$spl == TRUE)
 test &lt;- subset(iris, iris$spl == FALSE)
@@ -46,32 +46,32 @@ cfm</code></pre>
 ##             Reference
 ## Prediction   setosa versicolor virginica
 ##   setosa         10          0         0
-##   versicolor      0         10         1
-##   virginica       0          0         9
+##   versicolor      0          8         0
+##   virginica       0          2        10
 ## 
 ## Overall Statistics
 ##                                           
-##                Accuracy : 0.9667          
-##                  95% CI : (0.8278, 0.9992)
+##                Accuracy : 0.9333          
+##                  95% CI : (0.7793, 0.9918)
 ##     No Information Rate : 0.3333          
-##     P-Value [Acc &gt; NIR] : 2.963e-13       
+##     P-Value [Acc &gt; NIR] : 8.747e-12       
 ##                                           
-##                   Kappa : 0.95            
+##                   Kappa : 0.9             
 ##                                           
 ##  Mcnemar&#39;s Test P-Value : NA              
 ## 
 ## Statistics by Class:
 ## 
 ##                      Class: setosa Class: versicolor Class: virginica
-## Sensitivity                 1.0000            1.0000           0.9000
-## Specificity                 1.0000            0.9500           1.0000
-## Pos Pred Value              1.0000            0.9091           1.0000
-## Neg Pred Value              1.0000            1.0000           0.9524
+## Sensitivity                 1.0000            0.8000           1.0000
+## Specificity                 1.0000            1.0000           0.9000
+## Pos Pred Value              1.0000            1.0000           0.8333
+## Neg Pred Value              1.0000            0.9091           1.0000
 ## Prevalence                  0.3333            0.3333           0.3333
-## Detection Rate              0.3333            0.3333           0.3000
-## Detection Prevalence        0.3333            0.3667           0.3000
-## Balanced Accuracy           1.0000            0.9750           0.9500</code></pre>
-<p>To display confusion matrix as ggplot graphic:</p>
+## Detection Rate              0.3333            0.2667           0.3333
+## Detection Prevalence        0.3333            0.2667           0.4000
+## Balanced Accuracy           1.0000            0.9000           0.9500</code></pre>
+<p>To plot the obtained confusion matrix as a <code>ggplot</code> graphic, we use the following function:</p>
 <pre class="r"><code>ggplotConfusionMatrix &lt;- function(m){
   mytitle &lt;- paste(&quot;Accuracy&quot;, percent_format()(m$overall[1]),
                    &quot;Kappa&quot;, percent_format()(m$overall[2]))

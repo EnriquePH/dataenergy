@@ -66,6 +66,12 @@ blogdown::install_theme("EnriquePH/dataenergy-tanka")
 
 git submodule add https://github.com/EnriquePH/Binario ./themes/dataenergy-binario
 
+
+### Write a post
+
+Update post
+blogdown::build_site(build_rmd = 'timestamp')
+
 ## Highlight code
 
 * download highlight:  https://highlightjs.org/download/
