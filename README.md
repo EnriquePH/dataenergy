@@ -1,5 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d638f799-bbf7-4905-99e0-7696e734c879/deploy-status)](https://app.netlify.com/sites/blissful-brahmagupta-f99171/deploys)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Data Energy
 **Data Science Blog**
 
@@ -50,7 +52,8 @@ Graphic Design
 
 ### Important files
 
-* Choose a LICENCE: https://choosealicense.com/
+* [Choose a LICENSE](https://choosealicense.com/)
+* [Markdown License badges](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba) 
 * Add README.md
 
 ### Blogdown
