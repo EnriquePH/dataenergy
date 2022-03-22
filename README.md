@@ -50,7 +50,7 @@ Graphic Design
 
 ### Important files
 
-* Choose a LICENCE
+* Choose a LICENCE: https://choosealicense.com/
 * Add README.md
 
 ### Blogdown
